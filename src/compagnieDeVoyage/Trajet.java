@@ -4,7 +4,7 @@ package compagnieDeVoyage;
 /*
 Cette Classe represente un trajet
  */
-public class trajet {
+public class Trajet {
     private String villeDepart;
     private String villeArrive;
     private int kilometrageDepart;
@@ -19,7 +19,7 @@ public class trajet {
      * @param kilometrageArrive : represente le kilometrage du bus a l'arrive du trajet
      * @param bus : represente le bus utiliser pour effectuer le trajet
      */
-    public trajet(String villeDepart, String villeArrive, int kilometrageDepart, int kilometrageArrive, Bus bus ){
+    public Trajet(String villeDepart, String villeArrive, int kilometrageDepart, int kilometrageArrive, Bus bus ){
         this.villeArrive = villeArrive;
         this.villeDepart = villeDepart;
         this.kilometrageArrive = kilometrageArrive;
