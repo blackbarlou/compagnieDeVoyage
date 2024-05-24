@@ -1,2 +1,7 @@
-package compagnieDeVoyage;public class mauvaisFormatException {
+package compagnieDeVoyage;
+
+public class MauvaisFormatException extends Exception {
+    public MauvaisFormatException ( String message ){
+        super(message);
+    }
 }

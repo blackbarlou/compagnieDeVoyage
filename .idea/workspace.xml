@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/MauvaisFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Trajet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Trajet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/valeurNulleException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/ValeurNulleException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="compagnieDeVoyage" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Java" />
@@ -116,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716508995196</updated>
       <workItem from="1716508996431" duration="8228000" />
-      <workItem from="1716518040446" duration="3954000" />
+      <workItem from="1716518040446" duration="7584000" />
     </task>
     <servers />
   </component>

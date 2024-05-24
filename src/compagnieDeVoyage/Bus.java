@@ -1,11 +1,13 @@
 package compagnieDeVoyage;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Bus {
     private int capaciteReservoir;
     private int  nombrePassagers;
     private String couleur;
     private String numeroImmatriculation;
-
     /**
      * Constructeur de la classe Bus
      * @param numeroImmatriculation : represente numero d'immatriculation du bus compose de caractere alpha-numerique
@@ -54,12 +56,34 @@ public class Bus {
 
     @Override
     public String toString() {
-        return "Bus[" +
+        return "Bus [" +
                 "Immatriculation : " + numeroImmatriculation  +
                 ", capacite du Reservoir : " + capaciteReservoir +
                 ", nombre de Passagers : " + nombrePassagers +
                 ", couleur : " + couleur
                  + "]";
+    }
+
+    public static void creerBus () throws MauvaisFormatException {
+        Scanner scan = new Scanner(System.in);
+        String couleur, immatriculation;
+        int nombreDePlace, capaciteDuReservoir;
+
+        System.out.println("Donnez la couleur du bus");
+        couleur = scan.nextLine();
+        System.out.println("Donnez l'immatriculation du bus ");
+        immatriculation = scan.nextLine();
+        try {
+            System.out.println("Donnez le nombre de place du bus ");
+            nombreDePlace = scan.nextInt();
+            System.out.println("Donnez la capacite du reservoir");
+            capaciteDuReservoir = scan.nextInt();
+        } catch ( InputMismatchException exc ){
+            throw new MauvaisFormatException("Mauvaise Valeur entree : valeur veillez entrer un entier");
+        }
+        Bus bus = new Bus( immatriculation, couleur, nombreDePlace, capaciteDuReservoir );
+        System.out.println("Bus cree avec succes : " + bus.toString());
+
     }
 }
 
