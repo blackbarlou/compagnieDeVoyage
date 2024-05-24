@@ -55,12 +55,11 @@ public class Bus {
     @Override
     public String toString() {
         return "Bus[" +
-                "Immatriculation :" + numeroImmatriculation + '\'' +
-                "capacite du Reservoir :" + capaciteReservoir +
-                ", nombre de Passagers :" + nombrePassagers +
-                ", couleur : " + couleur + '\''
-                 +
-                ']';
+                "Immatriculation : " + numeroImmatriculation  +
+                ", capacite du Reservoir : " + capaciteReservoir +
+                ", nombre de Passagers : " + nombrePassagers +
+                ", couleur : " + couleur
+                 + "]";
     }
 }
 

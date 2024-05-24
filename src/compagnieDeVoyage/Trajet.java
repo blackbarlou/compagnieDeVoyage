@@ -70,18 +70,18 @@ public class Trajet {
     @Override
     public String toString() {
         return "trajet [" +
-                "ville de Depart : " + villeDepart + '\'' +
-                ", ville d'Arrive :" + villeArrive + '\'' +
-                ", kilometrage au Depart :" + kilometrageDepart +
-                ", kilometrage l'Arrive :" + kilometrageArrive +
-                ", bus du trajet: " + bus +
+                "ville de Depart : " + villeDepart +
+                ", ville d'Arrive : " + villeArrive  +
+                ", kilometrage au Depart : " + kilometrageDepart +
+                ", kilometrage l'Arrive : " + kilometrageArrive +
+                ", bus du trajet : " + bus +
                 ']';
     }
 
-    public void afficherLesCaracteristiques ( ) throws valeurNulleException {
+    public void afficherLesCaracteristiques ( ) throws ValeurNulleException {
 
         if ( bus == null ){
-            throw new valeurNulleException(" Attention vous n'avez pas de bus pour ce trajet ");
+            throw new ValeurNulleException(" Attention vous n'avez pas de bus pour ce trajet ");
         }
         System.out.println("Les caracteristiques du trajet :");
         System.out.println("La ville de Depart : " + villeDepart);
@@ -90,4 +90,6 @@ public class Trajet {
         System.out.println("kilometrage a l'Arrive :" + kilometrageArrive);
         System.out.println("Le bus du trajet : " + bus);
     }
+
+
 }
