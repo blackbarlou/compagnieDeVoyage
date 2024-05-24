@@ -5,27 +5,27 @@ package compagnieDeVoyage;
 Cette Classe represente un trajet
  */
 public class trajet {
-        private String villeDepart;
-        private String villeArrive;
-        private int kilometrageDepart;
-        private int kilometrageArrive;
-        private Bus bus;
+    private String villeDepart;
+    private String villeArrive;
+    private int kilometrageDepart;
+    private int kilometrageArrive;
+    private Bus bus;
 
-        /**
-         * constructeur de la classe trajet
-         * @param villeDepart : represente la ville de depart
-         * @param villeArrive : represnete la ville d'arrivee
-         * @param kilometrageDepart : represente le kilometrage du bus au depart du trajet
-         * @param kilometrageArrive : represente le kilometrage du bus a l'arrive du trajet
-         * @param bus : represente le bus utiliser pour effectuer le trajet
-         */
-        public trajet(String villeDepart, String villeArrive, int kilometrageDepart, int kilometrageArrive, Bus bus ){
-            this.villeArrive = villeArrive;
-            this.villeDepart = villeDepart;
-            this.kilometrageArrive = kilometrageArrive;
-            this.kilometrageDepart = kilometrageDepart;
-            this.bus = bus;
-        }
+    /**
+     * constructeur de la classe trajet
+     * @param villeDepart : represente la ville de depart
+     * @param villeArrive : represnete la ville d'arrivee
+     * @param kilometrageDepart : represente le kilometrage du bus au depart du trajet
+     * @param kilometrageArrive : represente le kilometrage du bus a l'arrive du trajet
+     * @param bus : represente le bus utiliser pour effectuer le trajet
+     */
+    public trajet(String villeDepart, String villeArrive, int kilometrageDepart, int kilometrageArrive, Bus bus ){
+        this.villeArrive = villeArrive;
+        this.villeDepart = villeDepart;
+        this.kilometrageArrive = kilometrageArrive;
+        this.kilometrageDepart = kilometrageDepart;
+        this.bus = bus;
+    }
 
     public Bus getBus() {
         return bus;
@@ -78,7 +78,11 @@ public class trajet {
                 ']';
     }
 
-    public void afficherLesCaracteristiques ( ) {
+    public void afficherLesCaracteristiques ( ) throws valeurNulleException {
+
+        if ( bus == null ){
+            throw new valeurNulleException(" Attention vous n'avez pas de bus pour ce trajet ");
+        }
         System.out.println("Les caracteristiques du trajet :");
         System.out.println("La ville de Depart : " + villeDepart);
         System.out.println("La ville de D'arrivee : " + villeArrive);
