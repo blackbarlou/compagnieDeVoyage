@@ -64,26 +64,5 @@ public class Bus {
                  + "]";
     }
 
-    public static void creerBus () throws MauvaisFormatException {
-        Scanner scan = new Scanner(System.in);
-        String couleur, immatriculation;
-        int nombreDePlace, capaciteDuReservoir;
-
-        System.out.println("Donnez la couleur du bus");
-        couleur = scan.nextLine();
-        System.out.println("Donnez l'immatriculation du bus ");
-        immatriculation = scan.nextLine();
-        try {
-            System.out.println("Donnez le nombre de place du bus ");
-            nombreDePlace = scan.nextInt();
-            System.out.println("Donnez la capacite du reservoir");
-            capaciteDuReservoir = scan.nextInt();
-        } catch ( InputMismatchException exc ){
-            throw new MauvaisFormatException("Mauvaise Valeur entree : valeur veillez entrer un entier");
-        }
-        Bus bus = new Bus( immatriculation, couleur, nombreDePlace, capaciteDuReservoir );
-        System.out.println("Bus cree avec succes : " + bus.toString());
-
-    }
 }
 
