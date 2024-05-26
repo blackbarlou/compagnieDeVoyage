@@ -16,6 +16,7 @@ public class Chauffeur {
     private String adresse;
     private Trajet [] trajetChauffeur;
     private final String numeroIdentification;
+    private static int count = 0;
 
     /**
      *
@@ -86,8 +87,8 @@ public class Chauffeur {
         return trajetChauffeur;
     }
 
-    public void setTrajetChauffeur(Trajet[] trajetChauffeur) {
-        this.trajetChauffeur = trajetChauffeur;
+    public void setTrajetChauffeur(Trajet trajet) {
+        this.trajetChauffeur[count++] = trajet;
     }
 
     public String getNumeroIdentification() {
@@ -116,7 +117,8 @@ public class Chauffeur {
         System.out.println("Numero d'identification du chauffeur : " + numeroIdentification);
         System.out.println("liste des trajets du chauffeur");
         for ( Trajet trajet : trajetChauffeur ){
-            System.out.println(trajet);
+            if ( trajet != null)
+                System.out.println(trajet);
         }
 
     }

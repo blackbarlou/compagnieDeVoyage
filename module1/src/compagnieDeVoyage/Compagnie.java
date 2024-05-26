@@ -84,12 +84,19 @@ public class Compagnie {
         listeDeBus[busCount++] = bus;
     }
 
-    public void creerTrajet () throws ValeurNulleException, MauvaisFormatException {
+    /**
+     * cette methode permet de creer un trajet a partir des informations de l'utilisateur
+     * @return le trajet cree
+     * @throws ValeurNulleException : classe qui gere les exception de valeur nulle dans le tableau de bus
+     * @throws MauvaisFormatException : classe qui l'exception de mauvais format entre lors de l'appel du Scanner
+     */
+    public Trajet creerTrajet () throws ValeurNulleException, MauvaisFormatException {
         String villeDepart;
         String villeArrivee;
         int kilometrageDepart;
         int kilometrageArrivee;
         Bus bus;
+        Trajet trajet;
         Scanner scan = new Scanner(System.in);
 
         try {
@@ -123,8 +130,9 @@ public class Compagnie {
             System.out.println("Votre choix ?");
             int choix = scan.nextInt();
             bus = listeDeBus[choix -1];
-            Trajet trajet = new Trajet(villeDepart, villeArrivee, kilometrageDepart, kilometrageArrivee, bus);
-        }
+            trajet = new Trajet(villeDepart, villeArrivee, kilometrageDepart, kilometrageArrivee, bus);
+            return trajet;
+        } return null;
     }
 
     /**
@@ -204,6 +212,42 @@ public class Compagnie {
 
         } catch ( StringIndexOutOfBoundsException sto ){
             throw new MauvaisFormatException("La taille du nom est trop court");
+        }
+    }
+
+
+
+
+    public void associerTrajetChauffeur() throws MauvaisFormatException, ValeurNulleException {
+        Trajet trajet;
+        Chauffeur chauffeur;
+        int count = 0;
+        int choix;
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Veillez selectionner le chauffeur a qui vous voulez associer un trajet");
+        if ( listeDeChauffeur[0] != null ){
+            for ( int i=0; i<listeDeChauffeur.length; i++ ){
+                if ( listeDeChauffeur[i] != null ){
+                    System.out.println( (i + 1) + " || " + listeDeChauffeur[i] );
+                }
+            }
+            System.out.println("Votre choix");
+            try {
+                choix = scan.nextInt();
+            } catch ( InputMismatchException e){
+                throw new MauvaisFormatException("Mauvaise valeur");
+            }
+            chauffeur = listeDeChauffeur[choix -1];
+            System.out.println("Entrez les information du trajet ");
+            trajet = creerTrajet();
+            chauffeur.setTrajetChauffeur(trajet);
+            System.out.println("Operation reussie");
+            chauffeur.afficherCaracteristiqueChauffeur();
+        } else {
+            System.out.println("La liste de chauffeur est vide veillez d'abord ajouter un chauffeur");
+            creerChauffeur();
+            associerTrajetChauffeur();
         }
     }
 }
