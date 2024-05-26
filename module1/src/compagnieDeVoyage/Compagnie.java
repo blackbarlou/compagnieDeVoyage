@@ -1,6 +1,5 @@
 package compagnieDeVoyage;
 
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -218,7 +217,7 @@ public class Compagnie {
 
 
 
-    public void associerTrajetChauffeur() throws MauvaisFormatException, ValeurNulleException {
+    public void reservation() throws MauvaisFormatException, ValeurNulleException {
         Trajet trajet;
         Chauffeur chauffeur;
         int count = 0;
@@ -247,7 +246,7 @@ public class Compagnie {
         } else {
             System.out.println("La liste de chauffeur est vide veillez d'abord ajouter un chauffeur");
             creerChauffeur();
-            associerTrajetChauffeur();
+            reservation();
         }
     }
 }

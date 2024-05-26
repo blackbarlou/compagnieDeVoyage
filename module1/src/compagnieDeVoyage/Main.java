@@ -16,7 +16,7 @@ public class Main {
         }*/
         //Chauffeur chauffeur = new Chauffeur("ben","Nour","hghdyu",24,2013);
         //System.out.println(chauffeur);
-        compagnie.associerTrajetChauffeur();
+        compagnie.reservation();
 
     }
 }
