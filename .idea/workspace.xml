@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Bus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Compagnie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Compagnie.java" afterDir="false" />
@@ -59,6 +61,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="compagnieDeVoyage" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SBS\IdeaProjects\devoir\module1" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.compagnieDeVoyage.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -77,12 +82,26 @@
     </configuration>
     <configuration name="compagnieDeVoyage.Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="compagnieDeVoyage.Main" />
+      <module name="module1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="compagnieDeVoyage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="devoir1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="devoir1" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,35 +124,11 @@
       <option name="presentableId" value="Default" />
       <updated>1716508995196</updated>
       <workItem from="1716508996431" duration="8228000" />
-      <workItem from="1716518040446" duration="14168000" />
-      <workItem from="1716692165727" duration="627000" />
+      <workItem from="1716518040446" duration="7584000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="canal/devoir" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

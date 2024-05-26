@@ -43,7 +43,8 @@ public class Compagnie {
     public String toString() {
         return "Compagnie : " + nom ;
     }
-    public  void creerBus() throws MauvaisFormatException {
+
+    public void creerBus () throws MauvaisFormatException {
         Scanner scan = new Scanner(System.in);
         String couleur, immatriculation;
         int nombreDePlace, capaciteDuReservoir;
