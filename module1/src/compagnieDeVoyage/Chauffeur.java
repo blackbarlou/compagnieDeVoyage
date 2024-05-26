@@ -2,6 +2,12 @@ package compagnieDeVoyage;
 
 import java.util.Arrays;
 
+/**
+ * Cette classe represente un Chauffeur
+ * nous allons implementer les methodes liee au chauffeur
+ * methode pour trouver les bus conduit par un chauffeur
+ * afficher les caracteristiques d'un chauffeur
+ */
 public class Chauffeur {
     private String nom;
     private String prenom;

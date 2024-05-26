@@ -6,12 +6,15 @@ import java.util.Scanner;
 
 /**
  * Cette Classe represente une compagnie nous allons implementer ici la liste des methodes en lien avec la compagnie
+ * methode qui permet de creer un bus
+ * methode qui permet de creer un trajet
+ * methode qui permet de creer un chauffeur
  */
 public class Compagnie {
     private String nom;
     private Bus [] listeDeBus;
-    private int busCount;
-    private int chauffeurCount;
+    private static int busCount;
+    private static int chauffeurCount;
     private Chauffeur [] listeDeChauffeur;
 
     public Compagnie ( String nom){
@@ -59,7 +62,8 @@ public class Compagnie {
     public void creerBus () throws MauvaisFormatException {
         Scanner scan = new Scanner(System.in);
         String couleur, immatriculation;
-        int nombreDePlace, capaciteDuReservoir;
+        int nombreDePlace;
+        double capaciteDuReservoir;
 
         System.out.println("Donnez la couleur du bus");
         couleur = scan.nextLine();
@@ -69,14 +73,15 @@ public class Compagnie {
             System.out.println("Donnez le nombre de place du bus ");
             nombreDePlace = scan.nextInt();
             System.out.println("Donnez la capacite du reservoir");
-            capaciteDuReservoir = scan.nextInt();
+            capaciteDuReservoir = scan.nextDouble();
         } catch ( InputMismatchException exc ){
-            throw new MauvaisFormatException("Mauvaise Valeur entree : valeur veillez entrer un entier");
+            System.out.println("le Nombre de place doit etre un entier et la capacite un reel veillez recommencer SVP");
+            creerBus();
+            throw new MauvaisFormatException("Mauvaise valeur entree lors de la saisie");
         }
         Bus bus = new Bus( immatriculation, couleur, nombreDePlace, capaciteDuReservoir );
         System.out.println("Bus cree avec succes : " + bus.toString());
-        listeDeBus[busCount] = bus;
-        busCount++;
+        listeDeBus[busCount++] = bus;
     }
 
     public void creerTrajet () throws ValeurNulleException, MauvaisFormatException {
@@ -128,15 +133,77 @@ public class Compagnie {
      */
     public void creerChauffeur () throws MauvaisFormatException {
         Scanner scan = new Scanner(System.in);
+        int age;
+        int caractere;
+        int anneeEmbauche;
+        int caractereDuNom;
+        int compteurDeTrajet = 0;
         String nom;
         String prenom;
-        int age;
-        int anneeEmbauche;
-        int compteurDeTrajet = 0;
         String adresse;
+        String codePostal;
         Trajet [] trajetChauffeur = new Trajet[20];
         String numeroIdentification;
+        Chauffeur chauffeur;
 
+        /*
+        cette boucle est utilisee pour s'assurer que les valeurs du nom et du prenom
+        ne soient pas vide a cause de la contrainte qui les lie au numero d'identification
+         */
+        do {
+            System.out.println("Donnez le nom du chauffeur");
+            nom = scan.nextLine();
+            System.out.println("Donnez le prenom du chauffeur");
+            prenom = scan.nextLine();
+        } while ( nom.isEmpty() && prenom.isEmpty() );
+        System.out.println("Remplissage de l'adresse du Chauffeur format canadien");
+        System.out.println("Entrez le numero et nom de rue (123 nom_Rue)");
+        adresse = scan.nextLine();
+        System.out.println("Entrez la ville et la province (nom_ville, nom_province) ");
+        adresse += scan.nextLine();
+        do {
+            System.out.println("Entrez le code postal sans espace ex (G9P3H3)");
+            codePostal = scan.nextLine();
+            caractere = codePostal.length();
+        } while ( caractere != 6 );
+        adresse += codePostal;
+        adresse += "CANADA";
+        try {
+            System.out.println("Donnez l'age du chauffeur");
+            age = scan.nextInt();
+            System.out.println("Donnez l'annee d'embauche du chauffeur");
+            anneeEmbauche = scan.nextInt();
+        } catch ( InputMismatchException in ){
+            throw new MauvaisFormatException("Mauvaise valeur entree l'age de l'annee doivent entre des entiers");
+        }
 
+        try {
+            caractereDuNom = nom.length();
+            if ( caractereDuNom < 4 ){
+                switch ( caractereDuNom ){
+                    case 1:
+                        numeroIdentification = "000" + nom + prenom.charAt(0) + String.valueOf( anneeEmbauche ).substring(2);
+                        break;
+                    case 2:
+                        numeroIdentification = "00" + nom + prenom.charAt(0) + String.valueOf( anneeEmbauche ).substring(2);
+                        break;
+                    case 3:
+                        numeroIdentification = "0" + nom + prenom.charAt(0) + String.valueOf( anneeEmbauche ).substring(2);
+                        break;
+                    default:
+                        break;
+                }
+                chauffeur = new Chauffeur( nom, prenom, adresse, age, anneeEmbauche );
+                System.out.println("operation reussie :" + chauffeur.toString());
+                listeDeChauffeur[chauffeurCount++] = chauffeur;
+            } else {
+                chauffeur = new Chauffeur( nom, prenom, adresse, age, anneeEmbauche );
+                System.out.println("operation reussie :" + chauffeur.toString());
+                listeDeChauffeur[chauffeurCount++] = chauffeur;
+            }
+
+        } catch ( StringIndexOutOfBoundsException sto ){
+            throw new MauvaisFormatException("La taille du nom est trop court");
+        }
     }
 }

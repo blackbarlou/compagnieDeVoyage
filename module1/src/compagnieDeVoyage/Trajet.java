@@ -1,8 +1,10 @@
 package compagnieDeVoyage;
 
 
-/*
-Cette Classe represente un trajet
+/**
+ * Cette classe represente un trajet
+ * Nous allons implementer ici les methodes propres au trajet
+ * la methode pour afficher les caracteristiques d'un trajet
  */
 public class Trajet {
     private String villeDepart;
