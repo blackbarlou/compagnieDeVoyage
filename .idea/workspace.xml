@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/MauvaisFormatException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Compagnie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Compagnie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,31 +36,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Trajet.executor": "Run",
-    "Application.compagnieDeVoyage.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "devoir",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/COURS/UQTR/INF1004 Structure de donnee/devoir1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/COURS/UQTR/INF1004 Structure de donnee/devoir1/src/compagnieDeVoyage/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Trajet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.compagnieDeVoyage.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;devoir&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/COURS/UQTR/INF1004 Structure de donnee/devoir1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/COURS/UQTR/INF1004 Structure de donnee/devoir1/src/compagnieDeVoyage/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="compagnieDeVoyage" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.compagnieDeVoyage.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Java" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -88,19 +87,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="devoir1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="devoir1" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -119,11 +105,35 @@
       <option name="presentableId" value="Default" />
       <updated>1716508995196</updated>
       <workItem from="1716508996431" duration="8228000" />
-      <workItem from="1716518040446" duration="7584000" />
+      <workItem from="1716518040446" duration="14168000" />
+      <workItem from="1716692165727" duration="627000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="canal/devoir" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
