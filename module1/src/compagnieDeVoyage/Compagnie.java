@@ -215,8 +215,13 @@ public class Compagnie {
     }
 
 
-
-
+    /**
+     * cette methode permet de faire une reservation ( choisir un chauffeur et lui associer un trajet )
+     * si la liste de chauffeur est vide, la methode permet te renvoie vers la methode creerChauffeur()
+     * avant de continuer grace a un appel recursif
+     * @throws MauvaisFormatException
+     * @throws ValeurNulleException
+     */
     public void reservation() throws MauvaisFormatException, ValeurNulleException {
         Trajet trajet;
         Chauffeur chauffeur;
@@ -249,4 +254,36 @@ public class Compagnie {
             reservation();
         }
     }
+
+    public void listeDeBusConduitParChauffeur() throws MauvaisFormatException {
+        int choix;
+        int count = 0;
+        Trajet [] trajet = new Trajet[20];
+        Chauffeur chauffeur;
+        Scanner scan = new Scanner(System.in);
+        Bus [] busList = new Bus[20];
+        if ( listeDeChauffeur[0] != null ){
+            System.out.println("Veillez choisir le chauffeur");
+            for ( int i=0; i<listeDeChauffeur.length; i++ ){
+                if ( listeDeChauffeur[i] != null){
+                    System.out.println( (1 + i) + "|| " + listeDeChauffeur[i] );
+                }
+            }
+            System.out.println("Votre choix ?");
+            choix = scan.nextInt();
+            chauffeur = listeDeChauffeur[choix -1 ];
+            for ( Trajet t : chauffeur.getTrajetChauffeur() ){
+                busList[count++] = t.getBus();
+            }
+            System.out.println("La liste de bus conduit par le chauffeur " + chauffeur.getNumeroIdentification());
+            for ( Bus b : busList ){
+                while ( b != null ){
+                    System.out.println(b);
+                }
+            }
+        } else {
+            System.out.println("La liste de chauffeur est vide ");
+        }
+    }
+
 }
