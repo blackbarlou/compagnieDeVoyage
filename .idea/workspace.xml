@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Compagnie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Compagnie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compagnieDeVoyage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/compagnieDeVoyage/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +17,14 @@
       <list>
         <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="canal/devoir" />
+    <option name="OPTIONS">
+      <set>
+        <option value="ALLOW_UNRELATED_HISTORIES" />
+      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -93,19 +96,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="devoir1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="devoir1" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -130,5 +120,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge du travail pour la suite" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge du travail pour la suite" />
   </component>
 </project>

@@ -4,15 +4,22 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Cette Classe represente une compagnie nous allons implementer ici la liste des methodes en lien avec la compagnie
+ */
 public class Compagnie {
     private String nom;
     private Bus [] listeDeBus;
+    private int busCount;
+    private int chauffeurCount;
     private Chauffeur [] listeDeChauffeur;
 
     public Compagnie ( String nom){
         this.nom = nom;
         this.listeDeBus = new Bus[100];
         this.listeDeChauffeur = new Chauffeur[100];
+        this.busCount = 0;
+        this.chauffeurCount = 0;
     }
 
     public String getNom() {
@@ -44,6 +51,11 @@ public class Compagnie {
         return "Compagnie : " + nom ;
     }
 
+    /**
+     * Cette methode permet a l'utilisateur de creer un bus a partir de ces propres valeurs et de l'ajouter dans la liste des bus
+     * @throws MauvaisFormatException : classe d'Exception pour gerer les problemes liee aux mauvaises valeurs entrees
+     * dans la variable nombreDePlace et capaciteDuReservoir
+     */
     public void creerBus () throws MauvaisFormatException {
         Scanner scan = new Scanner(System.in);
         String couleur, immatriculation;
@@ -63,6 +75,7 @@ public class Compagnie {
         }
         Bus bus = new Bus( immatriculation, couleur, nombreDePlace, capaciteDuReservoir );
         System.out.println("Bus cree avec succes : " + bus.toString());
-
+        listeDeBus[busCount] = bus;
+        busCount++;
     }
 }
