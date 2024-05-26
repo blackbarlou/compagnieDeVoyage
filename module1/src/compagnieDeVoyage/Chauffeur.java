@@ -97,12 +97,27 @@ public class Chauffeur {
     @Override
     public String toString() {
         return "Chauffeur [" +
-                "nom :" + nom + '\'' +
-                ", prenom : " + prenom + '\'' +
-                ", age :" + age +
+                "nom : " + nom  +
+                ", prenom : " + prenom  +
+                ", age : " + age +
                 ", annee d'embauche :" + anneeEmbauche +
-                ", adresse : " + adresse + '\'' +
-                ", numero d'identification='" + numeroIdentification + '\'' +
-                ']';
+                ", adresse : " + adresse  +
+                ", numero d'identification = " + numeroIdentification  +
+                "]";
+    }
+
+    /**
+     * cette methode permet d'afficher la liste des trajet du chauffeur en plus de ses informations personelles
+     */
+    public void afficherCaracteristiqueChauffeur () {
+        System.out.println("Nom du chauffeur : " + nom);
+        System.out.println("Prenom du chauffeur : " + prenom);
+        System.out.println("Age du chauffeur : " + age);
+        System.out.println("Numero d'identification du chauffeur : " + numeroIdentification);
+        System.out.println("liste des trajets du chauffeur");
+        for ( Trajet trajet : trajetChauffeur ){
+            System.out.println(trajet);
+        }
+
     }
 }
