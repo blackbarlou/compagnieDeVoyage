@@ -78,4 +78,65 @@ public class Compagnie {
         listeDeBus[busCount] = bus;
         busCount++;
     }
+
+    public void creerTrajet () throws ValeurNulleException, MauvaisFormatException {
+        String villeDepart;
+        String villeArrivee;
+        int kilometrageDepart;
+        int kilometrageArrivee;
+        Bus bus;
+        Scanner scan = new Scanner(System.in);
+
+        try {
+            System.out.println("Donnez la ville de depart du trajet ");
+            villeDepart = scan.nextLine();
+            System.out.println("Donnez la ville d'arrivee du trajet");
+            villeArrivee = scan.nextLine();
+            System.out.println("Donnez le kilometrage au depart votre trajet");
+            kilometrageDepart = scan.nextInt();
+            System.out.println("Donnez le kilometrage a l'arrivee de votre trajet");
+            kilometrageArrivee = scan.nextInt();
+        } catch (InputMismatchException exc){
+            throw new MauvaisFormatException("La valeur du kilometrage doit imperativement etre un entier");
+        }
+        System.out.println("Veillez choisir le bus associe au trajet");
+        try {
+            if ( listeDeBus[0] == null ){
+                throw new ValeurNulleException("Attention la liste de bus de cette compagnie est nulle ");
+            }
+
+        } catch ( ValeurNulleException ex ){
+            System.out.println(ex.getMessage() + "Veillez d'abord ajouter des bus");
+            creerBus();
+        }
+        if ( listeDeBus[0] != null ){
+            for ( int i=0; i<listeDeBus.length; i++ ){
+                if ( listeDeBus[i] != null ){
+                    System.out.println( (i+1) + "||" + listeDeBus[i] );
+                }
+            }
+            System.out.println("Votre choix ?");
+            int choix = scan.nextInt();
+            bus = listeDeBus[choix -1];
+            Trajet trajet = new Trajet(villeDepart, villeArrivee, kilometrageDepart, kilometrageArrivee, bus);
+        }
+    }
+
+    /**
+     * Methode pour creer un chauffeur a partir des donnees utilisateurs
+     * @throws MauvaisFormatException : classe pour gerer les erreurs liee a l'entree invalide
+     */
+    public void creerChauffeur () throws MauvaisFormatException {
+        Scanner scan = new Scanner(System.in);
+        String nom;
+        String prenom;
+        int age;
+        int anneeEmbauche;
+        int compteurDeTrajet = 0;
+        String adresse;
+        Trajet [] trajetChauffeur = new Trajet[20];
+        String numeroIdentification;
+
+
+    }
 }

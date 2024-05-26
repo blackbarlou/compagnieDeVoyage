@@ -3,13 +3,16 @@ package compagnieDeVoyage;
 
 public class Main {
 
-    public static void main(String[] args) throws MauvaisFormatException {
+    public static void main(String[] args) throws MauvaisFormatException, ValeurNulleException {
        Compagnie compagnie = new Compagnie("STTR");
         try {
-            compagnie.creerBus();
-            }
-        catch ( MauvaisFormatException exc ){
+            //compagnie.creerBus();
+            compagnie.creerTrajet();
+            } catch ( ValeurNulleException exc ){
             System.out.println("erreur rencontree " + exc.getMessage());
+        } catch ( MauvaisFormatException m ){
+            System.out.println(" Veillez reprendre " + m.getMessage());
+            compagnie.creerTrajet();
         }
 
     }
