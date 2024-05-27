@@ -20,7 +20,7 @@ public class Menu {
         System.out.println("Tapez 0 : pour quitter");
     }
 
-    public void menuPrincipal() throws MauvaisFormatException, ValeurNulleException {
+    public void menuPrincipal( Scanner scan) throws MauvaisFormatException, ValeurNulleException {
         int choix;
         boolean arret = true;
         do {
