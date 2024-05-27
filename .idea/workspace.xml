@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="Récupération de la Classe principal Main">
+    <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="Récupération du devoir pour modification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Menu.java" afterDir="false" />
     </list>
@@ -22,13 +22,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/module1/src/compagnieDeVoyage/Bus.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/module1/src/compagnieDeVoyage/Compagnie.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/module1/src/compagnieDeVoyage/Main.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/module1/src/compagnieDeVoyage/Menu.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/module1/src/compagnieDeVoyage/Trajet.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -50,7 +43,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "devoir",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SBS/IdeaProjects/devoir",
+    "last_opened_file_path": "D:/COURS/UQTR/INF1004 Structure de donnee/devoir1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,7 +121,7 @@
       <updated>1716508995196</updated>
       <workItem from="1716508996431" duration="8228000" />
       <workItem from="1716518040446" duration="7584000" />
-      <workItem from="1716745704352" duration="1967000" />
+      <workItem from="1716745704352" duration="8474000" />
     </task>
     <task id="LOCAL-00001" summary="Récupération du devoir pour modification">
       <option name="closed" value="true" />
@@ -146,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716840383004</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Récupération du devoir pour modification">
+      <option name="closed" value="true" />
+      <created>1716848724342</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716848724342</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,27 +158,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/devoir" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Récupération du devoir pour modification" />
     <MESSAGE value="Récupération de la Classe principal Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Récupération de la Classe principal Main" />
+    <MESSAGE value="Récupération du devoir pour modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Récupération du devoir pour modification" />
   </component>
 </project>

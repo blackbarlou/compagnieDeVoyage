@@ -149,7 +149,6 @@ public class Compagnie {
         int age;
         int caractere;
         int anneeEmbauche;
-        int compteurDeTrajet = 0;
         String nom;
         String prenom;
         String adresse;
