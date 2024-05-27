@@ -36,16 +36,16 @@ public class Compagnie {
         return listeDeBus;
     }
 
-    public void setListeDeBus(Bus[] listeDeBus) {
-        this.listeDeBus = listeDeBus;
+    public void setListeDeBus(Bus listeDeBus) {
+        this.listeDeBus[busCount++] = listeDeBus;
     }
 
     public Chauffeur[] getListeDeChauffeur() {
         return listeDeChauffeur;
     }
 
-    public void setListeDeChauffeur(Chauffeur[] listeDeChauffeur) {
-        this.listeDeChauffeur = listeDeChauffeur;
+    public void setListeDeChauffeur(Chauffeur listeDeChauffeur) {
+        this.listeDeChauffeur[chauffeurCount++] = listeDeChauffeur;
     }
 
     @Override
@@ -245,14 +245,14 @@ public class Compagnie {
             System.out.println("Votre choix ?");
             choix = scan.nextInt();
             chauffeur = listeDeChauffeur[choix -1 ];
-            for ( Trajet t : chauffeur.getTrajetChauffeur() ){
-                busList[count++] = t.getBus();
+            for ( Trajet t : chauffeur.getTrajetChauffeur() ) {
+                if ( t !=null )
+                    busList[count++] = t.getBus();
             }
             System.out.println("La liste de bus conduit par le chauffeur " + chauffeur.getNumeroIdentification());
             for ( Bus b : busList ){
-                while ( b != null ){
+                if (b != null)
                     System.out.println(b);
-                }
             }
         } else {
             System.out.println("La liste de chauffeur est vide ");
