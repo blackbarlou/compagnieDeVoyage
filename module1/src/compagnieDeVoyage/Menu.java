@@ -51,7 +51,8 @@ public class Menu {
                 default:
                     break;
             }
-
+            if (choix > 4)
+                System.out.println("Entree invalide veillez entrer un choix valide");
         } while (arret);
     }
 
@@ -104,7 +105,7 @@ public class Menu {
                 System.out.println("votre choix ?");
                 choix = scan.nextInt();
             } catch (InputMismatchException e) {
-                throw new MauvaisFormatException("Entree invalide veillez saisir un choix valide1");
+                throw new MauvaisFormatException("Entree invalide veillez saisir un choix valide");
             }
 
             switch ( choix ){
