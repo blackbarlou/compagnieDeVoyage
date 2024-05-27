@@ -24,13 +24,14 @@ public class Chauffeur {
      * @param adresse       : represente l'adresse du chauffeur format canadien
      * @param age           : represente l'age du chauffeur
      * @param anneeEmbauche : represente l'annee d'embauche du chauffeyr
-     *                      le numero d'identification est genere automatiquement en utilisant
+     *                      le numero d'identification est genere automatiquement en utilisant la methode genererNumeroIdentifiant()
      *                      -les 4 premiers caracteres du nom
      *                      -le 1er caractere du prenom
      *                      -les deux derniers caracteres de l'annee d'embauche
      *                      Pour ce fait nous avons utilise des methodes de la classe String substring () qui retourne une partie de chaine de caractere extraite d'une chaine initiale
      *                      charAt() qui retourne le caractere de la position demandee
      *                      String.valueof() qui transforme des valeurs en objet de type string
+     *                      Si le nombre de caractere du nom est inferieur a 4 des 0 sont ajoutes au debut de l'identifiant pour moduler
      */
     public Chauffeur(String nom, String prenom, String adresse, int age, int anneeEmbauche) {
         this.nom = nom;
@@ -122,6 +123,10 @@ public class Chauffeur {
 
     }
 
+    /**
+     * cette methode permet de creer l'identifiant du chauffeur tout en tenant compte des cas ou le nom serait de moins de 4 caracteres
+     * @return String identifiant : qui sera utilise par notre constructeur pour generer automatique l'id du chauffeur
+     */
     public String genererNumeroIdentification() {
         int caractereDuNom = this.nom.length();
         String indentifiant = "";

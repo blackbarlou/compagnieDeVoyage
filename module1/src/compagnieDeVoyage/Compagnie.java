@@ -16,6 +16,11 @@ public class Compagnie {
     private static int chauffeurCount;
     private Chauffeur [] listeDeChauffeur;
 
+
+    /**
+     * constructeur de la classe Compagnie
+     * @param nom : represente le nom de la compagnie
+     */
     public Compagnie ( String nom){
         this.nom = nom;
         this.listeDeBus = new Bus[100];
@@ -228,7 +233,11 @@ public class Compagnie {
         }
     }
 
-    public void listeDeBusConduitParChauffeur() throws MauvaisFormatException {
+    /**
+     * Cette methode permet de retourner tous les bus conduits par un chauffeur donnee
+     * le choix du chauffeur se fera a partir de la liste de chauffeur de la classe compagnie
+     */
+    public void listeDeBusConduitParChauffeur() {
         int choix;
         int count = 0;
         Trajet [] trajet = new Trajet[20];
