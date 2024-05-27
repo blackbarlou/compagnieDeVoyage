@@ -29,7 +29,7 @@ public class Menu {
                 System.out.println("Votre choix ?");
                 choix = Integer.parseInt(scan.nextLine());
             } catch (NumberFormatException exc) {
-                throw new MauvaisFormatException("Entree invalide veillez entrer un entier");
+                throw new MauvaisFormatException("Entree invalide veillez entrer un choix valide");
             }
 
             switch (choix) {
@@ -70,7 +70,7 @@ public class Menu {
                 System.out.println("votre choix ?");
                 choix = scan.nextInt();
             } catch (InputMismatchException e) {
-                throw new MauvaisFormatException("Entree invalide veillez saisir un entier");
+                throw new MauvaisFormatException("Entree invalide veillez entrer un choix valide");
             }
             switch (choix) {
 
@@ -104,7 +104,7 @@ public class Menu {
                 System.out.println("votre choix ?");
                 choix = scan.nextInt();
             } catch (InputMismatchException e) {
-                throw new MauvaisFormatException("Entree invalide veillez saisir un entier");
+                throw new MauvaisFormatException("Entree invalide veillez saisir un choix valide");
             }
 
             switch ( choix ){
