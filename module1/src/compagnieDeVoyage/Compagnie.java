@@ -78,7 +78,7 @@ public class Compagnie {
             nombreDePlace = scan.nextInt();
             scan.nextLine();
             System.out.println("Donnez la capacite du reservoir");
-            capaciteDuReservoir = scan.nextDouble();
+            capaciteDuReservoir = Float.parseFloat(scan.nextLine());
         } catch ( InputMismatchException exc ){
             System.out.println("le Nombre de place doit etre un entier et la capacite un reel veillez recommencer SVP");
             creerBus();
