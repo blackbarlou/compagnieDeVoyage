@@ -51,7 +51,7 @@ public class Menu {
                 default:
                     break;
             }
-            if (choix > 4)
+            if (choix > 2)
                 System.out.println("Entree invalide veillez entrer un choix valide");
         } while (arret);
     }
@@ -122,8 +122,7 @@ public class Menu {
                 default:
                     break;
             }
-            if (choix > 4)
-                System.out.println("Entree invalide veillez entrer un choix valide");
+
         }
 
     }
