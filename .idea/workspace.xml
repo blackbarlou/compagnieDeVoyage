@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="Récupération de la Classe principal Main" />
+    <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="Récupération de la Classe principal Main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +120,7 @@
       <updated>1716508995196</updated>
       <workItem from="1716508996431" duration="8228000" />
       <workItem from="1716518040446" duration="7584000" />
-      <workItem from="1716745704352" duration="1967000" />
+      <workItem from="1716745704352" duration="6515000" />
     </task>
     <task id="LOCAL-00001" summary="Récupération du devoir pour modification">
       <option name="closed" value="true" />
