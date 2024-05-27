@@ -143,14 +143,12 @@ public class Compagnie {
         int age;
         int caractere;
         int anneeEmbauche;
-        int caractereDuNom;
         int compteurDeTrajet = 0;
         String nom;
         String prenom;
         String adresse;
         String codePostal;
         Trajet [] trajetChauffeur = new Trajet[20];
-        String numeroIdentification;
         Chauffeur chauffeur;
 
         /*
@@ -184,36 +182,11 @@ public class Compagnie {
             throw new MauvaisFormatException("Mauvaise valeur entree l'age de l'annee doivent entre des entiers");
         }
 
-        try {
-            caractereDuNom = nom.length();
-            if ( caractereDuNom < 4 ){
-                switch ( caractereDuNom ){
-                    case 1:
-                        numeroIdentification = "000" + nom + prenom.charAt(0) + String.valueOf( anneeEmbauche ).substring(2);
-                        break;
-                    case 2:
-                        numeroIdentification = "00" + nom + prenom.charAt(0) + String.valueOf( anneeEmbauche ).substring(2);
-                        break;
-                    case 3:
-                        numeroIdentification = "0" + nom + prenom.charAt(0) + String.valueOf( anneeEmbauche ).substring(2);
-                        break;
-                    default:
-                        break;
-                }
-                chauffeur = new Chauffeur( nom, prenom, adresse, age, anneeEmbauche );
-                System.out.println("operation reussie :" + chauffeur.toString());
-                listeDeChauffeur[chauffeurCount++] = chauffeur;
-            } else {
-                chauffeur = new Chauffeur( nom, prenom, adresse, age, anneeEmbauche );
-                System.out.println("operation reussie :" + chauffeur.toString());
-                listeDeChauffeur[chauffeurCount++] = chauffeur;
-            }
+        chauffeur = new Chauffeur( nom, prenom, adresse, age, anneeEmbauche );
+        System.out.println("operation reussie :" + chauffeur.toString());
+        listeDeChauffeur[chauffeurCount++] = chauffeur;
 
-        } catch ( StringIndexOutOfBoundsException sto ){
-            throw new MauvaisFormatException("La taille du nom est trop court");
-        }
     }
-
 
     /**
      * cette methode permet de faire une reservation ( choisir un chauffeur et lui associer un trajet )
