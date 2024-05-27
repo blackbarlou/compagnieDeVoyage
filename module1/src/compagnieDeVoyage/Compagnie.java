@@ -19,9 +19,9 @@ public class Compagnie {
 
     /**
      * constructeur de la classe Compagnie
-     * @param nom : represente le nom de la compagnie
+     *
      */
-    public Compagnie ( String nom){
+    public Compagnie ( ){
         this.nom = nom;
         this.listeDeBus = new Bus[100];
         this.listeDeChauffeur = new Chauffeur[100];
@@ -76,6 +76,7 @@ public class Compagnie {
         try {
             System.out.println("Donnez le nombre de place du bus ");
             nombreDePlace = scan.nextInt();
+            scan.nextLine();
             System.out.println("Donnez la capacite du reservoir");
             capaciteDuReservoir = scan.nextDouble();
         } catch ( InputMismatchException exc ){
@@ -265,6 +266,45 @@ public class Compagnie {
             }
         } else {
             System.out.println("La liste de chauffeur est vide ");
+        }
+    }
+
+    /**
+     * cette methode permet d'afficher tous les bus utilises
+     * elle verifie dans la liste des chauffeurs de la compagnie les chauffeurs ayant effectue un trajet
+     * et affiche le bus de chaque trajet
+     */
+    public void afficherLesBusUtilise (){
+
+        System.out.println("Les bus utilises");
+
+        for ( Chauffeur chauffeur : listeDeChauffeur ){
+            if ( chauffeur != null ){
+                for ( Trajet trajet : chauffeur.getTrajetChauffeur() ){
+                    if ( trajet != null ){
+                        System.out.println(trajet.getBus());
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * cette methode permet d'afficher les caracteristiques de tous les trajets effectues
+     * elle parcours le tableay de chauffeur et pour chaque chauffeur affiche les caracteristiques de chaque trajet
+     * @throws ValeurNulleException
+     */
+    public void afficherLesTrajet() throws ValeurNulleException {
+
+        System.out.println("Les trajets caracteristiques des trajets effectues");
+        for ( Chauffeur chauffeur : listeDeChauffeur ){
+            if ( chauffeur != null ){
+                for ( Trajet trajetchauffeur : chauffeur.getTrajetChauffeur() ){
+                    if ( trajetchauffeur != null ){
+                        trajetchauffeur.afficherLesCaracteristiques();
+                    }
+                }
+            }
         }
     }
 
