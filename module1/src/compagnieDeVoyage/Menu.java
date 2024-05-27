@@ -122,6 +122,8 @@ public class Menu {
                 default:
                     break;
             }
+            if (choix > 4)
+                System.out.println("Entree invalide veillez entrer un choix valide");
         }
 
     }
