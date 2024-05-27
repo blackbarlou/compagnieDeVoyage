@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Menu.java" afterDir="false" />
+    <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="Récupération du devoir pour modification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Compagnie.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Compagnie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +18,6 @@
       <list>
         <option value="Class" />
       </list>
-    </option>
-  </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="canal/devoir" />
-    <option name="OPTIONS">
-      <set>
-        <option value="ALLOW_UNRELATED_HISTORIES" />
-      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -99,6 +89,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="devoir1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="devoir1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,14 +121,24 @@
       <updated>1716508995196</updated>
       <workItem from="1716508996431" duration="8228000" />
       <workItem from="1716518040446" duration="7584000" />
+      <workItem from="1716745704352" duration="1647000" />
     </task>
+    <task id="LOCAL-00001" summary="Récupération du devoir pour modification">
+      <option name="closed" value="true" />
+      <created>1716839499140</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716839499140</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="merge du travail pour la suite" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge du travail pour la suite" />
+    <MESSAGE value="Récupération du devoir pour modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Récupération du devoir pour modification" />
   </component>
 </project>
