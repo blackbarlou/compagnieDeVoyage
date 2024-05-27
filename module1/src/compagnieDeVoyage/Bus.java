@@ -3,8 +3,12 @@ package compagnieDeVoyage;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Cette Classe represente un Bus nous allons implementer ici toutes les methodes liees au bus
+ *
+ */
 public class Bus {
-    private int capaciteReservoir;
+    private double capaciteReservoir;
     private int  nombrePassagers;
     private String couleur;
     private String numeroImmatriculation;
@@ -15,14 +19,14 @@ public class Bus {
      * @param nombrePassagers : represente le nombre de passagers d'un bus
      * @param capaciteReservoir : represente la capacite du reservoir du bus
      */
-    public Bus( String numeroImmatriculation, String couleur, int nombrePassagers, int capaciteReservoir ) {
+    public Bus( String numeroImmatriculation, String couleur, int nombrePassagers, double capaciteReservoir ) {
         this.capaciteReservoir = capaciteReservoir;
         this.couleur = couleur;
         this.nombrePassagers = nombrePassagers;
         this.numeroImmatriculation = numeroImmatriculation;
     }
 
-    public int getCapaciteReservoir() {
+    public double getCapaciteReservoir() {
         return capaciteReservoir;
     }
 
