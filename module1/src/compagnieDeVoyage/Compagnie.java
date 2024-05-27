@@ -171,14 +171,14 @@ public class Compagnie {
         System.out.println("Entrez le numero et nom de rue (123 nom_Rue)");
         adresse = scan.nextLine();
         System.out.println("Entrez la ville et la province (nom_ville, nom_province) ");
-        adresse += scan.nextLine();
+        adresse += " " + scan.nextLine();
         do {
             System.out.println("Entrez le code postal sans espace ex (G9P3H3)");
             codePostal = scan.nextLine();
             caractere = codePostal.length();
         } while ( caractere != 6 );
-        adresse += codePostal;
-        adresse += "CANADA";
+        adresse += " " + codePostal;
+        adresse += " CANADA";
         try {
             System.out.println("Donnez l'age du chauffeur");
             age = scan.nextInt();
