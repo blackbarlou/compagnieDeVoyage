@@ -279,6 +279,9 @@ public class Compagnie {
      * et affiche le bus de chaque trajet
      */
     public void afficherLesBusUtilise (){
+        int compteurBus = 0;
+
+        if(listeDeBus[0] != null){
 
         System.out.println("Les bus utilises");
 
@@ -287,9 +290,15 @@ public class Compagnie {
                 for ( Trajet trajet : chauffeur.getTrajetChauffeur() ){
                     if ( trajet != null ){
                         System.out.println(trajet.getBus());
+                        compteurBus++;
                     }
                 }
             }
+        }
+            if (compteurBus == 0)
+                System.out.println("il n'y a aucun bus utilise pour le moment");
+        } else {
+            System.out.println("la liste de bus est vide");
         }
     }
 
