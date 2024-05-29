@@ -11,17 +11,16 @@ import java.util.Scanner;
  */
 public class Compagnie {
     private String nom;
-    private Bus [] listeDeBus;
+    private Bus[] listeDeBus;
     private static int busCount;
     private static int chauffeurCount;
-    private Chauffeur [] listeDeChauffeur;
+    private Chauffeur[] listeDeChauffeur;
 
 
     /**
      * constructeur de la classe Compagnie
-     *
      */
-    public Compagnie ( ){
+    public Compagnie() {
         this.nom = nom;
         this.listeDeBus = new Bus[100];
         this.listeDeChauffeur = new Chauffeur[100];
@@ -55,15 +54,16 @@ public class Compagnie {
 
     @Override
     public String toString() {
-        return "Compagnie : " + nom ;
+        return "Compagnie : " + nom;
     }
 
     /**
      * Cette methode permet a l'utilisateur de creer un bus a partir de ces propres valeurs et de l'ajouter dans la liste des bus
+     *
      * @throws MauvaisFormatException : classe d'Exception pour gerer les problemes liee aux mauvaises valeurs entrees
-     * dans la variable nombreDePlace et capaciteDuReservoir
+     *                                dans la variable nombreDePlace et capaciteDuReservoir
      */
-    public void creerBus () throws MauvaisFormatException {
+    public void creerBus() throws MauvaisFormatException {
         Scanner scan = new Scanner(System.in);
         String couleur, immatriculation;
         int nombreDePlace;
@@ -79,23 +79,24 @@ public class Compagnie {
             scan.nextLine();
             System.out.println("Donnez la capacite du reservoir");
             capaciteDuReservoir = Float.parseFloat(scan.nextLine());
-        } catch ( InputMismatchException exc ){
+        } catch (InputMismatchException exc) {
             System.out.println("le Nombre de place doit etre un entier et la capacite un reel veillez recommencer SVP");
             creerBus();
             throw new MauvaisFormatException("Mauvaise valeur entree lors de la saisie");
         }
-        Bus bus = new Bus( immatriculation, couleur, nombreDePlace, capaciteDuReservoir );
+        Bus bus = new Bus(immatriculation, couleur, nombreDePlace, capaciteDuReservoir);
         System.out.println("Bus cree avec succes : " + bus.toString());
         listeDeBus[busCount++] = bus;
     }
 
     /**
      * cette methode permet de creer un trajet a partir des informations de l'utilisateur
+     *
      * @return le trajet cree
-     * @throws ValeurNulleException : classe qui gere les exception de valeur nulle dans le tableau de bus
+     * @throws ValeurNulleException   : classe qui gere les exception de valeur nulle dans le tableau de bus
      * @throws MauvaisFormatException : classe qui l'exception de mauvais format entre lors de l'appel du Scanner
      */
-    public Trajet creerTrajet () throws ValeurNulleException, MauvaisFormatException {
+    public Trajet creerTrajet() throws ValeurNulleException, MauvaisFormatException {
         String villeDepart;
         String villeArrivee;
         int kilometrageDepart;
@@ -113,38 +114,40 @@ public class Compagnie {
             kilometrageDepart = scan.nextInt();
             System.out.println("Donnez le kilometrage a l'arrivee de votre trajet");
             kilometrageArrivee = scan.nextInt();
-        } catch (InputMismatchException exc){
+        } catch (InputMismatchException exc) {
             throw new MauvaisFormatException("La valeur du kilometrage doit imperativement etre un entier");
         }
         System.out.println("Veillez choisir le bus associe au trajet");
         try {
-            if ( listeDeBus[0] == null ){
+            if (listeDeBus[0] == null) {
                 throw new ValeurNulleException("Attention la liste de bus de cette compagnie est nulle ");
             }
 
-        } catch ( ValeurNulleException ex ){
+        } catch (ValeurNulleException ex) {
             System.out.println(ex.getMessage() + "Veillez d'abord ajouter des bus");
             creerBus();
         }
-        if ( listeDeBus[0] != null ){
-            for ( int i=0; i<listeDeBus.length; i++ ){
-                if ( listeDeBus[i] != null ){
-                    System.out.println( (i+1) + "||" + listeDeBus[i] );
+        if (listeDeBus[0] != null) {
+            for (int i = 0; i < listeDeBus.length; i++) {
+                if (listeDeBus[i] != null) {
+                    System.out.println((i + 1) + "||" + listeDeBus[i]);
                 }
             }
             System.out.println("Votre choix ?");
             int choix = scan.nextInt();
-            bus = listeDeBus[choix -1];
+            bus = listeDeBus[choix - 1];
             trajet = new Trajet(villeDepart, villeArrivee, kilometrageDepart, kilometrageArrivee, bus);
             return trajet;
-        } return null;
+        }
+        return null;
     }
 
     /**
      * Methode pour creer un chauffeur a partir des donnees utilisateurs
+     *
      * @throws MauvaisFormatException : classe pour gerer les erreurs liee a l'entree invalide
      */
-    public void creerChauffeur () throws MauvaisFormatException {
+    public void creerChauffeur() throws MauvaisFormatException {
         Scanner scan = new Scanner(System.in);
         int age;
         int caractere;
@@ -153,7 +156,7 @@ public class Compagnie {
         String prenom;
         String adresse;
         String codePostal;
-        Trajet [] trajetChauffeur = new Trajet[20];
+        Trajet[] trajetChauffeur = new Trajet[20];
         Chauffeur chauffeur;
 
         /*
@@ -165,7 +168,7 @@ public class Compagnie {
             nom = scan.nextLine();
             System.out.println("Donnez le prenom du chauffeur");
             prenom = scan.nextLine();
-        } while ( nom.isEmpty() && prenom.isEmpty() );
+        } while (nom.isEmpty() && prenom.isEmpty());
         System.out.println("Remplissage de l'adresse du Chauffeur format canadien");
         System.out.println("Entrez le numero et nom de rue (123 nom_Rue)");
         adresse = scan.nextLine();
@@ -175,7 +178,7 @@ public class Compagnie {
             System.out.println("Entrez le code postal sans espace ex (G9P3H3)");
             codePostal = scan.nextLine();
             caractere = codePostal.length();
-        } while ( caractere != 6 );
+        } while (caractere != 6);
         adresse += " " + codePostal;
         adresse += " CANADA";
         try {
@@ -183,11 +186,11 @@ public class Compagnie {
             age = scan.nextInt();
             System.out.println("Donnez l'annee d'embauche du chauffeur");
             anneeEmbauche = scan.nextInt();
-        } catch ( InputMismatchException in ){
+        } catch (InputMismatchException in) {
             throw new MauvaisFormatException("Mauvaise valeur entree l'age de l'annee doivent entre des entiers");
         }
 
-        chauffeur = new Chauffeur( nom, prenom, adresse, age, anneeEmbauche );
+        chauffeur = new Chauffeur(nom, prenom, adresse, age, anneeEmbauche);
         System.out.println("operation reussie :" + chauffeur.toString());
         listeDeChauffeur[chauffeurCount++] = chauffeur;
 
@@ -197,6 +200,7 @@ public class Compagnie {
      * cette methode permet de faire une reservation ( choisir un chauffeur et lui associer un trajet )
      * si la liste de chauffeur est vide, la methode permet te renvoie vers la methode creerChauffeur()
      * avant de continuer grace a un appel recursif
+     *
      * @throws MauvaisFormatException
      * @throws ValeurNulleException
      */
@@ -208,19 +212,19 @@ public class Compagnie {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Veillez selectionner le chauffeur a qui vous voulez associer un trajet");
-        if ( listeDeChauffeur[0] != null ){
-            for ( int i=0; i<listeDeChauffeur.length; i++ ){
-                if ( listeDeChauffeur[i] != null ){
-                    System.out.println( (i + 1) + " || " + listeDeChauffeur[i] );
+        if (listeDeChauffeur[0] != null) {
+            for (int i = 0; i < listeDeChauffeur.length; i++) {
+                if (listeDeChauffeur[i] != null) {
+                    System.out.println((i + 1) + " || " + listeDeChauffeur[i]);
                 }
             }
             System.out.println("Votre choix");
             try {
                 choix = scan.nextInt();
-            } catch ( InputMismatchException e){
+            } catch (InputMismatchException e) {
                 throw new MauvaisFormatException("Mauvaise valeur");
             }
-            chauffeur = listeDeChauffeur[choix -1];
+            chauffeur = listeDeChauffeur[choix - 1];
             System.out.println("Entrez les information du trajet ");
             trajet = creerTrajet();
             chauffeur.setTrajetChauffeur(trajet);
@@ -241,32 +245,32 @@ public class Compagnie {
         int choix;
         int count = 0;
         int compteurAffichage = 0;
-        Trajet [] trajet = new Trajet[20];
+        Trajet[] trajet = new Trajet[20];
         Chauffeur chauffeur;
         Scanner scan = new Scanner(System.in);
-        Bus [] busList = new Bus[20];
-        if ( listeDeChauffeur[0] != null ){
+        Bus[] busList = new Bus[20];
+        if (listeDeChauffeur[0] != null) {
             System.out.println("Veillez choisir le chauffeur");
-            for ( int i=0; i<listeDeChauffeur.length; i++ ){
-                if ( listeDeChauffeur[i] != null){
-                    System.out.println( (1 + i) + "|| " + listeDeChauffeur[i] );
+            for (int i = 0; i < listeDeChauffeur.length; i++) {
+                if (listeDeChauffeur[i] != null) {
+                    System.out.println((1 + i) + "|| " + listeDeChauffeur[i]);
                 }
             }
             System.out.println("Votre choix ?");
             choix = scan.nextInt();
-            chauffeur = listeDeChauffeur[choix -1 ];
-            for ( Trajet t : chauffeur.getTrajetChauffeur() ) {
-                if ( t !=null )
+            chauffeur = listeDeChauffeur[choix - 1];
+            for (Trajet t : chauffeur.getTrajetChauffeur()) {
+                if (t != null)
                     busList[count++] = t.getBus();
             }
             System.out.println("La liste de bus conduit par le chauffeur " + chauffeur.getNumeroIdentification());
-            for ( Bus b : busList ){
+            for (Bus b : busList) {
                 if (b != null) {
                     System.out.println(b);
                     compteurAffichage++;
                 }
             }
-            if ( compteurAffichage == 0 )
+            if (compteurAffichage == 0)
                 System.out.println("il n'y a aucun bus utilise pour le moment");
         } else {
             System.out.println("La liste de chauffeur est vide ");
@@ -278,23 +282,23 @@ public class Compagnie {
      * elle verifie dans la liste des chauffeurs de la compagnie les chauffeurs ayant effectue un trajet
      * et affiche le bus de chaque trajet
      */
-    public void afficherLesBusUtilise (){
+    public void afficherLesBusUtilise() {
         int compteurBus = 0;
 
-        if(listeDeBus[0] != null){
+        if (listeDeBus[0] != null) {
 
-        System.out.println("Les bus utilises");
+            System.out.println("Les bus utilises");
 
-        for ( Chauffeur chauffeur : listeDeChauffeur ){
-            if ( chauffeur != null ){
-                for ( Trajet trajet : chauffeur.getTrajetChauffeur() ){
-                    if ( trajet != null ){
-                        System.out.println(trajet.getBus());
-                        compteurBus++;
+            for (Chauffeur chauffeur : listeDeChauffeur) {
+                if (chauffeur != null) {
+                    for (Trajet trajet : chauffeur.getTrajetChauffeur()) {
+                        if (trajet != null) {
+                            System.out.println(trajet.getBus());
+                            compteurBus++;
+                        }
                     }
                 }
             }
-        }
             if (compteurBus == 0)
                 System.out.println("il n'y a aucun bus utilise pour le moment");
         } else {
@@ -305,20 +309,27 @@ public class Compagnie {
     /**
      * cette methode permet d'afficher les caracteristiques de tous les trajets effectues
      * elle parcours le tableay de chauffeur et pour chaque chauffeur affiche les caracteristiques de chaque trajet
+     *
      * @throws ValeurNulleException
      */
     public void afficherLesTrajet() throws ValeurNulleException {
-
-        System.out.println("Les trajets caracteristiques des trajets effectues");
-        for ( Chauffeur chauffeur : listeDeChauffeur ){
-            if ( chauffeur != null ){
-                for ( Trajet trajetchauffeur : chauffeur.getTrajetChauffeur() ){
-                    if ( trajetchauffeur != null ){
-                        trajetchauffeur.afficherLesCaracteristiques();
+        int compteurTrajet = 0;
+        if (listeDeChauffeur[0] != null) {
+            System.out.println("Les trajets caracteristiques des trajets effectues");
+            for (Chauffeur chauffeur : listeDeChauffeur) {
+                if (chauffeur != null) {
+                    for (Trajet trajetchauffeur : chauffeur.getTrajetChauffeur()) {
+                        if (trajetchauffeur != null) {
+                            trajetchauffeur.afficherLesCaracteristiques();
+                            compteurTrajet ++;
+                        }
                     }
                 }
             }
-        }
-    }
+            if(compteurTrajet == 0 )
+                System.out.println("Aucun trajet crée");
+        }else
+            System.out.println("Aucun trajet à afficher");
 
+    }
 }
