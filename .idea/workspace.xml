@@ -34,25 +34,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Trajet.executor": "Run",
-    "Application.compagnieDeVoyage.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "devoir",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/COURS/UQTR/INF1004 Structure de donnee/devoir1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/COURS/UQTR/INF1004 Structure de donnee/devoir1/src/compagnieDeVoyage/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Trajet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.compagnieDeVoyage.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;devoir&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/COURS/UQTR/INF1004 Structure de donnee/devoir1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/COURS/UQTR/INF1004 Structure de donnee/devoir1/src/compagnieDeVoyage/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="compagnieDeVoyage" />
@@ -89,19 +89,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="devoir1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="devoir1" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -122,6 +109,7 @@
       <workItem from="1716508996431" duration="8228000" />
       <workItem from="1716518040446" duration="7584000" />
       <workItem from="1716745704352" duration="8474000" />
+      <workItem from="1716944876357" duration="936000" />
     </task>
     <task id="LOCAL-00001" summary="Récupération du devoir pour modification">
       <option name="closed" value="true" />
@@ -165,8 +153,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Récupération de la Classe principal Main" />
     <MESSAGE value="Récupération du devoir pour modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Récupération du devoir pour modification" />
+    <MESSAGE value="Récupération de la Classe principal Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Récupération de la Classe principal Main" />
   </component>
 </project>

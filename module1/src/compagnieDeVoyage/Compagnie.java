@@ -240,6 +240,7 @@ public class Compagnie {
     public void listeDeBusConduitParChauffeur() {
         int choix;
         int count = 0;
+        int compteurAffichage = 0;
         Trajet [] trajet = new Trajet[20];
         Chauffeur chauffeur;
         Scanner scan = new Scanner(System.in);
@@ -260,9 +261,13 @@ public class Compagnie {
             }
             System.out.println("La liste de bus conduit par le chauffeur " + chauffeur.getNumeroIdentification());
             for ( Bus b : busList ){
-                if (b != null)
+                if (b != null) {
                     System.out.println(b);
+                    compteurAffichage++;
+                }
             }
+            if ( compteurAffichage == 0 )
+                System.out.println("il n'y a aucun bus utilise pour le moment");
         } else {
             System.out.println("La liste de chauffeur est vide ");
         }
