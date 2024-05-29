@@ -13,7 +13,7 @@ public class Menu {
 
     public void afficherMenu() {
         System.out.println("Menu");
-        System.out.println("Tapez 1 : pour ajouter un trajet/chauffeur/bus");
+        System.out.println("Tapez 1 : pour ajouter un chauffeur/bus");
         System.out.println("Tapez 2 : pour effectuer une reservation");
         System.out.println("Tapez 3 : pour trouver la liste des bus conduit par un chauffeur");
         System.out.println("Tapez 4 : pour les caracteristiques de tous les bus et trajets");
@@ -104,7 +104,7 @@ public class Menu {
                 System.out.println("votre choix ?");
                 choix = scan.nextInt();
             } catch (InputMismatchException e) {
-                throw new MauvaisFormatException("Entree invalide veillez saisir un choix valide");
+                throw new MauvaisFormatException("Entree invalide veillez saisir un choix valide1");
             }
 
             switch ( choix ){
