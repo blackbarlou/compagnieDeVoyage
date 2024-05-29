@@ -13,6 +13,7 @@ public class Menu {
 
     public void afficherMenu() {
         System.out.println("Menu");
+        System.out.println("=======================================================================\n");
         System.out.println("Tapez 1 : pour ajouter un chauffeur/bus");
         System.out.println("Tapez 2 : pour effectuer une reservation");
         System.out.println("Tapez 3 : pour trouver la liste des bus conduit par un chauffeur");
@@ -46,6 +47,7 @@ public class Menu {
                     sousMenu2();
                     break;
                 case 0:
+                    System.out.println("Merci Aurevoir!");
                     arret = false;
                     break;
                 default:
