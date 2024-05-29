@@ -16,7 +16,7 @@ public class Menu {
         System.out.println("Tapez 1 : pour ajouter un chauffeur/bus");
         System.out.println("Tapez 2 : pour effectuer une reservation");
         System.out.println("Tapez 3 : pour trouver la liste des bus conduit par un chauffeur");
-        System.out.println("Tapez 4 : pour les caracteristiques de tous les bus et trajets");
+        System.out.println("Tapez 4 : pour les caracteristiques de tous les bus et trajets utilises");
         System.out.println("Tapez 0 : pour quitter");
     }
 
