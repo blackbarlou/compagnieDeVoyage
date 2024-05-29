@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f5e9f12-e34e-4004-ad23-c8b410464687" name="Changes" comment="Récupération du devoir pour modification">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Compagnie.java" beforeDir="false" afterPath="$PROJECT_DIR$/module1/src/compagnieDeVoyage/Compagnie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
